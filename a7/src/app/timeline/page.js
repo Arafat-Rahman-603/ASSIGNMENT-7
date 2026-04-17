@@ -56,7 +56,7 @@ export default function Timeline() {
           </div>
         ) : (
           filteredTimeline.map(entry => (
-            <div key={entry.id} className="glass-card p-4 flex items-center gap-4 hover:shadow-md transition-shadow hover:scale-105">
+            <div key={entry.id} className="glass-card p-4 flex items-center gap-4 hover:shadow-md transition-shadow hover:scale-105 transition-transform duration-300 cursor-pointer">
               <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center shrink-0">
                 {getIcon(entry.type)}
               </div>
