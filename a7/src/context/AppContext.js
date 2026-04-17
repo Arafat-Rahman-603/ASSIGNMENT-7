@@ -1,7 +1,6 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from "react";
-import friendsData from "@/data/friends.json";
 
 const AppContext = createContext();
 
@@ -11,31 +10,41 @@ export function AppProvider({ children }) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const savedFriends = localStorage.getItem("keenkeeper_friends");
-    const savedTimeline = localStorage.getItem("keenkeeper_timeline");
+    const loadData = async () => {
+      const savedFriends = localStorage.getItem("keenkeeper_friends");
+      const savedTimeline = localStorage.getItem("keenkeeper_timeline");
 
-    if (savedFriends) {
-      setFriends(JSON.parse(savedFriends));
-    } else {
-      setFriends(friendsData);
-      localStorage.setItem("keenkeeper_friends", JSON.stringify(friendsData));
-    }
+      if (savedFriends) {
+        setFriends(JSON.parse(savedFriends));
+      } else {
+        try {
+          const res = await fetch("/friends.json");
+          const data = await res.json();
+          setFriends(data);
+          localStorage.setItem("keenkeeper_friends", JSON.stringify(data));
+        } catch (error) {
+          console.error("Failed to fetch friends data", error);
+        }
+      }
 
-    if (savedTimeline) {
-      setTimeline(JSON.parse(savedTimeline));
-    } else {
-      const initialTimeline = [
-        { id: "t1", friendId: 7, type: "Meetup", date: "2026-03-29T10:00:00Z", friendName: "Tom Baker" },
-        { id: "t2", friendId: 1, type: "Text", date: "2026-03-28T14:30:00Z", friendName: "Sarah Chen" },
-        { id: "t3", friendId: 7, type: "Meetup", date: "2026-03-26T18:00:00Z", friendName: "Olivia Martinez" },
-        { id: "t4", friendId: 5, type: "Video", date: "2026-03-23T19:00:00Z", friendName: "Aisha Patel" },
-      ];
-      setTimeline(initialTimeline);
-      localStorage.setItem("keenkeeper_timeline", JSON.stringify(initialTimeline));
-    }
-    setTimeout(() => {
-      setIsLoaded(true);
-    }, 800);
+      if (savedTimeline) {
+        setTimeline(JSON.parse(savedTimeline));
+      } else {
+        const initialTimeline = [
+          { id: "t1", friendId: 7, type: "Meetup", date: "2026-03-29T10:00:00Z", friendName: "Tom Baker" },
+          { id: "t2", friendId: 1, type: "Text", date: "2026-03-28T14:30:00Z", friendName: "Sarah Chen" },
+          { id: "t3", friendId: 7, type: "Meetup", date: "2026-03-26T18:00:00Z", friendName: "Olivia Martinez" },
+          { id: "t4", friendId: 5, type: "Video", date: "2026-03-23T19:00:00Z", friendName: "Aisha Patel" },
+        ];
+        setTimeline(initialTimeline);
+        localStorage.setItem("keenkeeper_timeline", JSON.stringify(initialTimeline));
+      }
+      setTimeout(() => {
+        setIsLoaded(true);
+      }, 500);
+    };
+
+    loadData();
   }, []);
   useEffect(() => {
     if (isLoaded) {

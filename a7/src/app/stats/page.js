@@ -9,7 +9,7 @@ export default function Stats() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
+     setIsClient(true);
   }, []);
 
   if (!isLoaded || !isClient) {
