@@ -63,7 +63,7 @@ export default function Stats() {
         
         {data.length === 0 ? (
           <div className="text-center py-12 text-slate-500">
-            No interactions recorded yet. Go to a friend's page to check in!
+           {" No interactions recorded yet. Go to a friend's page to check in!"}
           </div>
         ) : (
           <div className="h-80 w-full">

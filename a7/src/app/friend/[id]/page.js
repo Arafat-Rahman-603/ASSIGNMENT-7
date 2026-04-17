@@ -73,7 +73,7 @@ export default function FriendDetail({ params }) {
               ))}
             </div>
 
-            <p className="text-slate-600 italic mb-4">"{friend.bio}"</p>
+            <p className="text-slate-600 italic mb-4">{`"${friend.bio}"`}</p>
             <p className="text-sm text-slate-500">Preferred: {friend.email}</p>
           </div>
 
