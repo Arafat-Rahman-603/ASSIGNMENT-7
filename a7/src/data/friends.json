@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Chen",
+    "picture": "https://i.pravatar.cc/150?u=sarah",
+    "email": "sarah.chen@example.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["college", "tech", "close friend"],
+    "bio": "Met in our first computer science class. We talk every week about the latest in AI and startups.",
+    "goal": 7,
+    "next_due_date": "2026-04-21"
+  },
+  {
+    "id": 2,
+    "name": "Marcus Johnson",
+    "picture": "https://i.pravatar.cc/150?u=marcus",
+    "email": "marcus.j@example.com",
+    "days_since_contact": 12,
+    "status": "almost due",
+    "tags": ["work", "mentor"],
+    "bio": "Former manager who taught me everything about project management. Great sounding board for career advice.",
+    "goal": 14,
+    "next_due_date": "2026-04-19"
+  },
+  {
+    "id": 3,
+    "name": "Elena Rodriguez",
+    "picture": "https://i.pravatar.cc/150?u=elena",
+    "email": "elena.rod@example.com",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tags": ["childhood", "hometown"],
+    "bio": "Grew up on the same street. Life gets busy but we always pick up right where we left off.",
+    "goal": 30,
+    "next_due_date": "2026-03-30"
+  },
+  {
+    "id": 4,
+    "name": "David Kim",
+    "picture": "https://i.pravatar.cc/150?u=david",
+    "email": "dkim@example.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["gym", "hiking"],
+    "bio": "My reliable workout buddy and hiking partner. Always up for an outdoor adventure on the weekends.",
+    "goal": 7,
+    "next_due_date": "2026-04-19"
+  },
+  {
+    "id": 5,
+    "name": "Aisha Patel",
+    "picture": "https://i.pravatar.cc/150?u=aisha",
+    "email": "aisha.p@example.com",
+    "days_since_contact": 28,
+    "status": "almost due",
+    "tags": ["college", "roommate"],
+    "bio": "Shared a tiny dorm room for two years. Now she lives across the country but we still keep in touch.",
+    "goal": 30,
+    "next_due_date": "2026-04-19"
+  },
+  {
+    "id": 6,
+    "name": "Tom Baker",
+    "picture": "https://i.pravatar.cc/150?u=tom",
+    "email": "tbaker@example.com",
+    "days_since_contact": 65,
+    "status": "overdue",
+    "tags": ["family", "cousin"],
+    "bio": "My favorite cousin on my dad's side. We promised to stay in touch more often this year.",
+    "goal": 60,
+    "next_due_date": "2026-04-10"
+  },
+  {
+    "id": 7,
+    "name": "Olivia Martinez",
+    "picture": "https://i.pravatar.cc/150?u=olivia",
+    "email": "olivia.m@example.com",
+    "days_since_contact": 1,
+    "status": "on-track",
+    "tags": ["book club", "local"],
+    "bio": "Met at the neighborhood bookstore. We swap books and discuss them over coffee every few weeks.",
+    "goal": 21,
+    "next_due_date": "2026-05-07"
+  },
+  {
+    "id": 8,
+    "name": "Ryan O'Brien",
+    "picture": "https://i.pravatar.cc/150?u=ryan",
+    "email": "ryan.ob@example.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["gaming", "online"],
+    "bio": "We've been playing the same MMO together for 5 years. Great guy to chat with while gaming.",
+    "goal": 14,
+    "next_due_date": "2026-04-13"
+  }
+]
