@@ -49,9 +49,11 @@ export default function FriendDetail({ params }) {
         <div className="md:col-span-1 flex flex-col gap-4">
           <div className="glass-card p-8 flex flex-col items-center text-center">
             <div className="relative w-32 h-32 mb-4">
-              <img 
+              <Image 
                 src={friend.picture} 
                 alt={friend.name}
+                width={128}
+                height={128}
                 className="rounded-full object-cover w-full h-full border-4 border-white shadow-sm"
               />
             </div>
