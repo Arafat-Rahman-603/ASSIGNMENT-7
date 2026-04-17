@@ -4,6 +4,7 @@ import React, { use } from "react";
 import { useRouter } from "next/navigation";
 import { Phone, MessageSquare, Video, BellRing, Archive, Trash2, Edit } from "lucide-react";
 import toast from "react-hot-toast";
+import Image from "next/image";
 import { useAppContext } from "@/context/AppContext";
 
 export default function FriendDetail({ params }) {
