@@ -4,9 +4,17 @@ import React from "react";
 import { Plus } from "lucide-react";
 import { useAppContext } from "@/context/AppContext";
 import FriendCard from "@/components/FriendCard";
+import { useState } from "react";
 
 export default function Home() {
   const { friends, timeline, isLoaded } = useAppContext();
+
+  const [add, setAdd] = useState(false);
+
+  if(add){
+    alert("Add a friend is not working ! try later");
+    setAdd(false);
+  }
 
   const totalFriends = friends.length;
   const onTrack = friends.filter(f => f.status === "on-track").length;
@@ -32,7 +40,8 @@ export default function Home() {
         <p className="text-lg text-slate-500 max-w-2xl mx-auto mb-8">
           Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
         </p>
-        <button className="inline-flex items-center gap-2 bg-brand hover:bg-brand-light text-white font-semibold py-3 px-6 rounded-md transition-colors shadow-sm">
+        <button className="inline-flex items-center gap-2 bg-brand hover:bg-brand-light text-white font-semibold py-3 px-6 rounded-md transition-colors shadow-sm cursor-pointer"
+        onClick={()=>setAdd(true)}>
           <Plus size={20} />
           Add a Friend
         </button>
