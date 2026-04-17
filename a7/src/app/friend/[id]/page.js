@@ -55,6 +55,7 @@ export default function FriendDetail({ params }) {
                 alt={friend.name}
                 width={128}
                 height={128}
+                loading="lazy"
                 className="rounded-full object-cover w-full h-full border-4 border-white shadow-sm"
               />
             </div>
