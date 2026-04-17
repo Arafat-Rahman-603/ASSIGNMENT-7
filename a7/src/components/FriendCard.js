@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function FriendCard({ friend }) {
   const statusColors = {
@@ -12,9 +13,13 @@ export default function FriendCard({ friend }) {
     <Link href={`/friend/${friend.id}`}>
       <div className="glass-card p-6 flex flex-col items-center text-center transition-transform hover:-translate-y-1 hover:shadow-lg cursor-pointer h-full">
         <div className="relative w-24 h-24 mb-4">
-          <img 
+          <Image 
             src={friend.picture} 
             alt={friend.name}
+            width={100}
+            style={{width: "100%",height: "100%"}}
+            loading="lazy"  
+            height={100}
             className="rounded-full object-cover w-full h-full border-4 border-white shadow-sm"
           />
         </div>
